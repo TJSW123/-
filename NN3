@@ -1,0 +1,39 @@
+#define  _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+#include<windows.h>
+#include<time.h>
+#include<math.h>
+#include<stdlib.h>
+
+
+int main()
+{
+	int max = 0;
+	int m = 0;
+	int n = 0;
+	scanf("%d%d", &m,& n);
+	int x = 0;
+	if (m >= n)
+	{
+		x = n ;
+	}
+	else
+	{
+		x = m ;
+	}
+	while ( x>=1)
+	{
+		if (m % x == 0 && n % x == 0)
+		{
+			max = x;
+			break;
+		}
+		x--;
+	}
+
+	printf("%d\n",max);
+
+
+	return 0;
+}
