@@ -1,0 +1,36 @@
+#define  _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<string.h>
+#include<windows.h>
+#include<time.h>
+#include<math.h>
+#include<stdlib.h>
+
+void j_hlt(char* a, char* b)
+{
+
+	if (*a != '\0')
+	{
+		*b= *a;
+	    j_hlt(a+1, b+1);
+	}
+	else
+	{
+		*(b + 1) = '\0';
+	}
+}
+
+
+int main()
+{ 
+	char arr1[20] = { 0 };
+	char arr2[20] = { 0 };
+	char arr3[20] = { 0 };
+	scanf("%s", arr1);
+	j_hlt(arr1, arr2 );
+	j_hlt(arr2, arr3 );
+	printf("%s\n", arr3);
+
+
+	return 0;
+}
